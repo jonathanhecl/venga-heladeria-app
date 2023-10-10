@@ -1,16 +1,16 @@
 {
     "list": [
         {"ID": 1,
-        "Name": "Frutilla",
-        "Price": 100},
+        "name": "Frutilla",
+        "price": 100},
         {"ID": 2,
-        "Name": "Manzana",
-        "Price": 200},
+        "name": "Manzana",
+        "price": 200},
         {"ID": 3,
-        "Name": "Pera",
-        "Price": 300},
+        "name": "Pera",
+        "price": 300},
         {"ID": 4,
-        "Name": "Naranja",
-        "Price": 400}
+        "name": "Naranja",
+        "price": 400}
     ]
 }

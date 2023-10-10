@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmk1n32grvhk0"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_bq472"]
+[ext_resource type="PackedScene" uid="uid://bugdufcch1pgh" path="res://scenes/app.tscn" id="2_5krk3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_woqr8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqlll"]
+font_size = 60
+font_color = Color(0.745098, 0.772549, 0.964706, 1)
+outline_size = 8
+outline_color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6g8sx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_54436"]
+font_size = 42
+font_color = Color(0.984314, 0.694118, 0.764706, 1)
+outline_size = 8
+outline_color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("labelLoading")]
+script = ExtResource("1_bq472")
+appScene = ExtResource("2_5krk3")
+labelLoading = NodePath("Control/VBoxContainer/Label2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_woqr8")
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "🍨🍧🍦
+VengaHeladeria"
+label_settings = SubResource("LabelSettings_mqlll")
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_6g8sx")
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Cargando"
+label_settings = SubResource("LabelSettings_54436")
+horizontal_alignment = 1

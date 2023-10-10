@@ -1,5 +1,6 @@
 extends Node
 
+var phone: int = 111222333444555
 var listURL = "https://raw.githubusercontent.com/jonathanhecl/venga-heladeria-app/main/list.json"
 var resultList = []
 

@@ -15,7 +15,10 @@ func generateList():
 func _on_button_pressed():
 	var items = myList.get_selected_items()
 	
-	OS.shell_open("https://wa.me/555345953845983?text=" + str(items))
+	var items_text: String = "Hola VengaHeladeria, quisiera ordenar"
 	
 	for i in items:
+		items_text += str(", ", Global.resultList.list[i].name, " por ", Global.resultList.list[i].price, "U$D")
 		print(i)
+	
+	OS.shell_open(str("https://wa.me/", Global.phone, "?text=" + items_text))
